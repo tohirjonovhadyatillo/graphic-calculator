@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg,red, blue) no-repeat center center fixed; 
+    animation: color 12s ease-in-out infinite;
+}
+
+
+.comment {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    z-index: 10;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.comment .calculator {
+    position: relative;
+    display: grid;
+}
+
+.comment .calculator .value {
+    grid-column: span 4;
+    height: 140px;
+    width: 300px;
+    border: none;
+    outline: none;
+    text-align: right;
+    padding: 10px;
+    font-size: 30px;
+    background: transparent;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.comment .calculator span {
+    display: grid;
+    place-items: center;
+    width: 75px;
+    height: 75px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.5s;
+}
+
+.comment .calculator span:hover {
+    transition: 0s;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.comment .calculator span:active {
+    background: #14ff47;
+    color: #192fee;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.comment .calculator .clear {
+    grid-column: span 2;
+    width: 150px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.comment .calculator .plus {
+    grid-row: span 2;
+    height: 150px;
+}
+
+.comment .calculator .equal {
+    background: rgba(255, 255, 255, 0.05);
+}
